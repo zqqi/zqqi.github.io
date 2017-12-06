@@ -6,7 +6,7 @@
     
     
     
-    <title>Hexo | hexo</title>
+    <title>An apple</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     
     <meta name="theme-color" content="#77AAFF">
@@ -41,15 +41,15 @@
     
     <meta name="description" content="A blog from Hexo">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="An apple">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="An apple">
 <meta property="og:description" content="A blog from Hexo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="An apple">
 <meta name="twitter:description" content="A blog from Hexo">
     
-        <link rel="alternate" type="application/atom+xml" title="Hexo" href="/atom.xml">
+        <link rel="alternate" type="application/atom+xml" title="An apple" href="/atom.xml">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link id="style" rel="stylesheet" href="/css/style.css?v=2.0">
@@ -75,7 +75,7 @@
         <hgroup class="introduce">
           <h5 class="nickname" id="name">周琪</h5>
           
-            <div id="mymotto" class="motto"></div>
+            <div id="yiyanmotto" class="motto">&nbsp;</div>
           
         </hgroup>
       </div>
@@ -124,7 +124,7 @@
                 <i class="icon icon-lg icon-envelope-o envelope-o"></i>
               </a>
           
-              <a class="nav2item" data-title="欢迎关注全栈之路公众号！" href="javascript:;" title="欢迎关注全栈之路公众号！" >
+              <a class="nav2item" data-title="Github！" href="https://github.com/zqqi" target="_blank"title="Github！" >
                 <i class="icon icon-lg icon-github github"></i>
               </a>
           
@@ -149,7 +149,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Hexo</div>
+        <div class="flex-col header-title ellipsis">An apple</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -173,7 +173,7 @@
         <div id="myheader">
             <h1 class="title">
                  
-                    Hexo
+                    An apple
                 
             </h1>
             <h5 class="subtitle">
@@ -275,11 +275,11 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        1、基础配置篇1.安装&amp;搭建
+        基础配置篇1.安装&amp;搭建
 安装Git：安装后，注册 Github 账号，配置 SSH（具体见下一步）,打开 Git Bash,接下来的命令均在Git Bash中执行
 安装Node.js
 安装 Hexo : $npm install -g hexo
-安装依赖包： $npm insta...
+安装依赖包： $npm install...
     
         <div>
             <a href="/2017/12/06/Hexo初入坑心得（1）/" class="post-more waves-button">
@@ -486,7 +486,7 @@ $("#name").bumpyText();
 
 /* 网站运行时间 */
 setInterval(function () {
-	setTime("2017/12/5");
+	setTime("2017/12/4");
 }, 1000);
 
 /* 文章块的淡出 */
@@ -494,12 +494,7 @@ postshow();
 
 /* 座右铭 */
 
-    elasticText({
-        id: "mymotto",
-        duration: 100,
-        effact: "easeOut",
-        content: ""
-    });
+   getHitokoto();
 
 
 

@@ -6,7 +6,7 @@
     
     
     
-    <title>归档: 2017 | Hexo | hexo</title>
+    <title>归档: 2017 | An apple</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     
     <meta name="theme-color" content="#77AAFF">
@@ -41,15 +41,15 @@
     
     <meta name="description" content="A blog from Hexo">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="An apple">
 <meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="An apple">
 <meta property="og:description" content="A blog from Hexo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="An apple">
 <meta name="twitter:description" content="A blog from Hexo">
     
-        <link rel="alternate" type="application/atom+xml" title="Hexo" href="/atom.xml">
+        <link rel="alternate" type="application/atom+xml" title="An apple" href="/atom.xml">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link id="style" rel="stylesheet" href="/css/style.css?v=2.0">
@@ -75,7 +75,7 @@
         <hgroup class="introduce">
           <h5 class="nickname" id="name">周琪</h5>
           
-            <div id="mymotto" class="motto"></div>
+            <div id="yiyanmotto" class="motto">&nbsp;</div>
           
         </hgroup>
       </div>
@@ -124,7 +124,7 @@
                 <i class="icon icon-lg icon-envelope-o envelope-o"></i>
               </a>
           
-              <a class="nav2item" data-title="欢迎关注全栈之路公众号！" href="javascript:;" title="欢迎关注全栈之路公众号！" >
+              <a class="nav2item" data-title="Github！" href="https://github.com/zqqi" target="_blank"title="Github！" >
                 <i class="icon icon-lg icon-github github"></i>
               </a>
           
@@ -421,7 +421,7 @@ $("#name").bumpyText();
 
 /* 网站运行时间 */
 setInterval(function () {
-	setTime("2017/12/5");
+	setTime("2017/12/4");
 }, 1000);
 
 /* 文章块的淡出 */
@@ -429,12 +429,7 @@ postshow();
 
 /* 座右铭 */
 
-    elasticText({
-        id: "mymotto",
-        duration: 100,
-        effact: "easeOut",
-        content: ""
-    });
+   getHitokoto();
 
 
 
