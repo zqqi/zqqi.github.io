@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Hexo配置篇（2）（举例，持续更新） | Hexo | hexo</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    
+    <meta name="theme-color" content="#77AAFF">
+    
+    
+    <meta name="keywords" content="Hexo">
+    
+    
+
+    
+
+    <!-- Baidu Push -->
+<script>
+	(function(){
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		}
+		else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+
+	var _hmt = _hmt || [];
+</script>
+
+
+
+    
+    <meta name="description" content="Hexo笔记">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo配置篇（2）（举例，持续更新）">
+<meta property="og:url" content="http://yoursite.com/2017/12/06/Hexo配置篇（2）（举例，持续更新）/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Hexo笔记">
+<meta property="og:image" content="https://assets-cdn.github.com/images/icons/emoji/unicode/1f60e.png?v7">
+<meta property="og:image" content="https://assets-cdn.github.com/images/icons/emoji/unicode/1f60e.png?v7">
+<meta property="og:updated_time" content="2017-12-06T06:41:50.535Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo配置篇（2）（举例，持续更新）">
+<meta name="twitter:description" content="Hexo笔记">
+<meta name="twitter:image" content="https://assets-cdn.github.com/images/icons/emoji/unicode/1f60e.png?v7">
+    
+        <link rel="alternate" type="application/atom+xml" title="Hexo" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link id="style" rel="stylesheet" href="/css/style.css?v=2.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+            
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+    <aside id="menu"  class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" >
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg" alt="avatar">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname" id="name">周琪</h5>
+          
+            <div id="mymotto" class="motto"></div>
+          
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+              <li class="waves-block waves-effect">
+                  <a href="/"  >
+                    <i class="icon icon-lg icon-home"></i>
+                    <span>主 页</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/archives"  >
+                    <i class="icon icon-lg icon-archives"></i>
+                    <span>归 档</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/categories"  >
+                    <i class="icon icon-lg icon-th-list"></i>
+                    <span>分 类</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/tags"  >
+                    <i class="icon icon-lg icon-tags"></i>
+                    <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/about"  >
+                    <i class="icon icon-lg icon-smile-o"></i>
+                    <span>关 于</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+      <div class="nav2">
+          
+              <a class="nav2item" data-title="邮箱" href="mailto:243343141@qq.com" target="_parent"title="邮箱" >
+                <i class="icon icon-lg icon-envelope-o envelope-o"></i>
+              </a>
+          
+              <a class="nav2item" data-title="欢迎关注全栈之路公众号！" href="javascript:;" title="欢迎关注全栈之路公众号！" >
+                <i class="icon icon-lg icon-github github"></i>
+              </a>
+          
+              <a class="nav2item" data-title="微博" href="javascript:;" title="微博" >
+                <i class="icon icon-lg icon-weibo weibo"></i>
+              </a>
+          
+
+            </div>
+        
+      </ul>
+        
+    </div>
+  </div>
+ 
+</aside>
+
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Hexo配置篇（2）（举例，持续更新）</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        <a href="../../atom.xml" target="_blank" class="header-icon waves-effect waves-circle waves-light" id="Rss">
+            <i class="icon icon-lg icon-rss"></i>
+        </a>
+    </div>
+</header>
+<header class="content-header post-header">
+    
+    
+    <div class="container fade-scale">
+        <div id="myheader">
+            <h1 class="title">
+                
+            </h1>
+            <h5 class="subtitle">
+                
+                
+            </h5>
+        </div>
+    </div>
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、编辑站点配置文件"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、编辑站点配置文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-启用主题"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.启用主题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-基本配置"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2.基本配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-可选配置（需要下载插件）"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3.可选配置（需要下载插件）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#feed配置"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">feed配置</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#jsonContent配置"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">jsonContent配置</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#abbrlink配置"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">abbrlink配置</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、主题配置"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、主题配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主菜单"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">主菜单</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#小图标菜单"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">小图标菜单</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#必备图片"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">必备图片</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#座右铭"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">座右铭</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#网站开启时间"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">网站开启时间</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#页面标题"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">页面标题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#评论插件"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">评论插件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文章截断"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">文章截断</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#打赏"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">打赏</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#导航菜单"><span class="post-toc-number">2.10.</span> <span class="post-toc-text">导航菜单</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分享"><span class="post-toc-number">2.11.</span> <span class="post-toc-text">分享</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#动画特效配置"><span class="post-toc-number">3.</span> <span class="post-toc-text">动画特效配置</span></a></li></ol>
+        </nav>
+    </aside>
+   
+<article id="post-Hexo配置篇（2）（举例，持续更新）"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Hexo配置篇（2）（举例，持续更新）</h1>
+        <div class="post-meta">
+            <i class="icon icon-lg icon-calendar-o"></i>
+            发表于
+            <time class="post-time" title="2017-12-06 14:39:53" datetime="2017-12-06T06:39:53.000Z"  itemprop="datePublished">2017-12-06</time>
+
+            <br id="mybreak"/>
+            
+	<i class="icon icon-lg icon-folder-o"></i>
+	分类：<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/笔记/">笔记</a></li></ul>
+
+
+            <i>·</i>
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>次浏览
+</span>
+
+
+        </div>
+        <div class="post-count-custom">
+            <i class="icon icon-lg icon-comment-o"></i>
+            阅读本文可能花费您&nbsp;<span class="post-count">6</span>&nbsp;分钟
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="一、编辑站点配置文件"><a href="#一、编辑站点配置文件" class="headerlink" title="一、编辑站点配置文件"></a>一、编辑站点配置文件</h2><p>编辑站点配置文件，hexo/_config.yml</p>
+<h3 id="1-启用主题"><a href="#1-启用主题" class="headerlink" title="1.启用主题"></a>1.启用主题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: indigo</span><br></pre></td></tr></table></figure>
+<h3 id="2-基本配置"><a href="#2-基本配置" class="headerlink" title="2.基本配置"></a>2.基本配置</h3><p>这些内容会在主题中得到展示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: your title</span><br><span class="line">subtitle: your subtitle</span><br><span class="line">description: your description</span><br><span class="line">keywords: your keywords</span><br><span class="line">author: your name</span><br><span class="line">email: your email</span><br><span class="line">url: your site url</span><br></pre></td></tr></table></figure>
+<h3 id="3-可选配置（需要下载插件）"><a href="#3-可选配置（需要下载插件）" class="headerlink" title="3.可选配置（需要下载插件）"></a>3.可选配置（需要下载插件）</h3><h4 id="feed配置"><a href="#feed配置" class="headerlink" title="feed配置"></a>feed配置</h4><p>参考<a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">hexo-generator-feed</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 0</span><br></pre></td></tr></table></figure>
+<h4 id="jsonContent配置"><a href="#jsonContent配置" class="headerlink" title="jsonContent配置"></a>jsonContent配置</h4><p>为了节约资源，可以对 jsonContent 插件生成的数据字段进行配置。参考 <a href="https://github.com/alexbruno/hexo-generator-json-content" target="_blank" rel="noopener">hexo-generator-json-content</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:</span><br><span class="line">  meta: false</span><br><span class="line">  pages: false</span><br><span class="line">  posts:</span><br><span class="line">    title: true</span><br><span class="line">    date: true</span><br><span class="line">    path: true</span><br><span class="line">    text: true</span><br><span class="line">    raw: false</span><br><span class="line">    content: false</span><br><span class="line">    slug: false</span><br><span class="line">    updated: false</span><br><span class="line">    comments: false</span><br><span class="line">    link: false</span><br><span class="line">    permalink: false</span><br><span class="line">    excerpt: false</span><br><span class="line">    categories: false</span><br><span class="line">    tags: true</span><br></pre></td></tr></table></figure>
+<h4 id="abbrlink配置"><a href="#abbrlink配置" class="headerlink" title="abbrlink配置"></a>abbrlink配置</h4><p>有利于seo，主题脚本对其有依赖，需要覆盖原有信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">url: http://tomotoes.com/</span><br><span class="line">root: /</span><br><span class="line">permalink: /posts/:abbrlink/  # “posts/” 可自行更换</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"># abbrlink config</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  # 算法：crc16(default) and crc32</span><br><span class="line">  rep: hex    # 进制：dec(default) and hex</span><br></pre></td></tr></table></figure>
+<p>Emoji配置</p>
+<p>具体可参照此<a href="https://github.com/crimx/hexo-filter-github-emojis" target="_blank" rel="noopener">文档</a> 我的配置如下,使用时参考 <a href="https://www.webpagefx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener">Emoji</a>表，如果我想 <img class="github-emoji" title="sunglasses" alt="sunglasses" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f60e.png?v7" height="20" width="20"> ，在文章中键入 <img class="github-emoji" title="sunglasses" alt="sunglasses" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f60e.png?v7" height="20" width="20">即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">githubEmojis:</span><br><span class="line">  enable: true</span><br><span class="line">  className: github-emoji</span><br><span class="line">  unicode: false</span><br><span class="line">  styles:</span><br><span class="line">  localEmojis:</span><br></pre></td></tr></table></figure>
+<h2 id="二、主题配置"><a href="#二、主题配置" class="headerlink" title="二、主题配置"></a>二、主题配置</h2><p>编辑主题配置文件，themes/tomotoes/_config.yml。</p>
+<h3 id="主菜单"><a href="#主菜单" class="headerlink" title="主菜单"></a>主菜单</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># 例子</span><br><span class="line"># home 就是图标的标识 从这里挑选http://fontawesome.io/icons/ 图标，把图标下面的文字替换即可使用</span><br><span class="line">#   text ：显示文本</span><br><span class="line">#   url ： 链接</span><br><span class="line">#   target: 链接的锚点 是否在本站中打开链接</span><br><span class="line"></span><br><span class="line"># 主菜单</span><br><span class="line">menu:</span><br><span class="line">  home:</span><br><span class="line">    text: 主 页</span><br><span class="line">    url: /</span><br><span class="line">  archives:</span><br><span class="line">    text: 归 档</span><br><span class="line">    url: /archives</span><br><span class="line">  th-list:</span><br><span class="line">    text: 分 类</span><br><span class="line">    url: /categories</span><br><span class="line">  tags:</span><br><span class="line">    text: 标 签</span><br><span class="line">    url: /tags</span><br><span class="line">  smile-o:</span><br><span class="line">    text: 关 于</span><br><span class="line">    url: /about</span><br></pre></td></tr></table></figure>
+<h3 id="小图标菜单"><a href="#小图标菜单" class="headerlink" title="小图标菜单"></a>小图标菜单</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># 图标菜单</span><br><span class="line"># 如果您没有微信公众号 您完全可以更改为 其他的链接 比如微博</span><br><span class="line">menu2:</span><br><span class="line">  envelope-o:</span><br><span class="line">    text: 邮箱</span><br><span class="line">    url: mailto:1755811882@qq.com</span><br><span class="line">    target: _parent</span><br><span class="line">  weixin:</span><br><span class="line">    text: 欢迎关注全栈之路公众号！</span><br><span class="line">    url: javascript:;</span><br><span class="line">    target: false</span><br><span class="line">  github:</span><br><span class="line">    text: github</span><br><span class="line">    url: https://github.com/JinmaQAQ</span><br><span class="line">    target: _blank</span><br></pre></td></tr></table></figure>
+<h3 id="必备图片"><a href="#必备图片" class="headerlink" title="必备图片"></a>必备图片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 你的头像url</span><br><span class="line">avatar: /img/avatar.jpg</span><br><span class="line"># avatar link</span><br><span class="line">avatar_link: /</span><br><span class="line"># favicon</span><br><span class="line">favicon: /img/favicon.ico</span><br><span class="line"># 微信公众号</span><br><span class="line">wechat: /img/wechat.jpg</span><br></pre></td></tr></table></figure>
+<h3 id="座右铭"><a href="#座右铭" class="headerlink" title="座右铭"></a>座右铭</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 座右铭</span><br><span class="line"># mymotto:  关闭一言</span><br><span class="line">#  content: 用此内容代替一言</span><br><span class="line">mymotto: false</span><br><span class="line"># content: 我的座右铭</span><br></pre></td></tr></table></figure>
+<h3 id="网站开启时间"><a href="#网站开启时间" class="headerlink" title="网站开启时间"></a>网站开启时间</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 网站开启时间</span><br><span class="line">startime: 2017/10/11</span><br></pre></td></tr></table></figure>
+<h3 id="页面标题"><a href="#页面标题" class="headerlink" title="页面标题"></a>页面标题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># 首页副标题</span><br><span class="line">homesubtitle: 在Web全栈的道路上努力前行...</span><br><span class="line"></span><br><span class="line"># 归档页标题</span><br><span class="line">archivestitle: 路漫漫其修远兮</span><br><span class="line"></span><br><span class="line"># 标签页标题</span><br><span class="line">tagstitle: 不积小流无以成江海</span><br><span class="line"></span><br><span class="line"># 分类页标题</span><br><span class="line">categoriestitle: 不积跬步无以至千里</span><br><span class="line"></span><br><span class="line"># 关于页标题</span><br><span class="line">aboutitle: 一个坏掉的番茄 </span><br><span class="line"></span><br><span class="line">tags_title: 标签</span><br><span class="line">archives_title: 归档</span><br><span class="line">categories_title: 分类</span><br></pre></td></tr></table></figure>
+<h3 id="评论插件"><a href="#评论插件" class="headerlink" title="评论插件"></a>评论插件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># 是否使用 gitment，https://github.com/imsun/gitment</span><br><span class="line">gitment: false</span><br><span class="line"># owner: xxx</span><br><span class="line"># repo: xxx</span><br><span class="line"># client_id: xxx</span><br><span class="line"># client_secret: xxx</span><br><span class="line"></span><br><span class="line">gitalk: </span><br><span class="line">  owner: xxx</span><br><span class="line">  repo: xxx</span><br><span class="line">  client_id: xxx</span><br><span class="line">  client_secret: xxx</span><br><span class="line"></span><br><span class="line"># Valine Comment system. https://valine.js.org</span><br><span class="line">valine:</span><br><span class="line">  enable: false # 如果你想使用valine，请将值设置为 true</span><br><span class="line">  appId:  # your leancloud appId</span><br><span class="line">  appKey:  # your leancloud appKey</span><br><span class="line">  notify: false # Mail notify</span><br><span class="line">  verify: false # Verify code</span><br><span class="line">  avatar: mm # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide</span><br><span class="line">  placeholder: Just go go # Comment Box placeholder</span><br><span class="line">  guest_info: nick,mail,link # Comment header info</span><br><span class="line">  pageSize: 10 # comment list page size</span><br></pre></td></tr></table></figure>
+<h3 id="文章截断"><a href="#文章截断" class="headerlink" title="文章截断"></a>文章截断</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">excerpt_render: true  </span><br><span class="line"> excerpt_length: 175  </span><br><span class="line"> excerpt_link: 阅读全文 »  </span><br><span class="line"> mathjax: false  </span><br><span class="line"> archive_yearly: true</span><br></pre></td></tr></table></figure>
+<h3 id="打赏"><a href="#打赏" class="headerlink" title="打赏"></a>打赏</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 是否开启打赏，关闭 reward: false  </span><br><span class="line"> reward:  </span><br><span class="line">  title: 感谢您的鼓励支持！     #打赏回馈话语  </span><br><span class="line">  wechat: /img/wechat.png     #微信，关闭设为 false  </span><br><span class="line">  alipay: /img/alipay.png     #支付宝，关闭设为 false  </span><br><span class="line">  wechatalipay: /img/dog.png  #点击打赏时显示的图片</span><br></pre></td></tr></table></figure>
+<h3 id="导航菜单"><a href="#导航菜单" class="headerlink" title="导航菜单"></a>导航菜单</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 是否大屏幕下文章页隐藏导航</span><br><span class="line"> hideMenu: true</span><br></pre></td></tr></table></figure>
+<h3 id="分享"><a href="#分享" class="headerlink" title="分享"></a>分享</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 是否开启分享  </span><br><span class="line"> share: true</span><br></pre></td></tr></table></figure>
+<h2 id="动画特效配置"><a href="#动画特效配置" class="headerlink" title="动画特效配置"></a>动画特效配置</h2><p>tomotoes\layout_partial\switch.ejs文件，您可以在这里进行动画的舍取</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">if(window.innerWidth &gt; 600)&#123;</span><br><span class="line">    /* 3D标题 */</span><br><span class="line">    $(&apos;.content-header&apos;).on(&apos;mousemove&apos;, threedee);</span><br><span class="line"></span><br><span class="line">    /* 底部追随鼠标 */</span><br><span class="line">    $(&quot;.footer&quot;).hover(2);</span><br><span class="line"></span><br><span class="line">    /* gotop键的涟漪 */</span><br><span class="line">    $(&quot;#gotop&quot;).hover(1);</span><br><span class="line"></span><br><span class="line">    /* 赞赏的粒子雨 */</span><br><span class="line">    $(&quot;#reward&quot;).hover(3);</span><br><span class="line"></span><br><span class="line">    /* 微信公众号的底部渲染 */</span><br><span class="line">    $(&quot;#wechat&quot;).hover(4);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/* 名字跳动 */</span><br><span class="line">$(&apos;#name&apos;).bumpyText();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/* 网站运行时间 */</span><br><span class="line">setInterval(function () &#123;</span><br><span class="line">    setTime(&apos;&lt;%- theme.startime %&gt;&apos;)</span><br><span class="line">&#125;, 1000);</span><br><span class="line"></span><br><span class="line">/* 文章块的淡出 */</span><br><span class="line">postshow();</span><br><span class="line"></span><br><span class="line">/* 座右铭 */</span><br><span class="line">&lt;% if(theme.mymotto) &#123; %&gt;</span><br><span class="line">    elasticText(&#123;</span><br><span class="line">        id: &apos;mymotto&apos;,</span><br><span class="line">        duration: 100,</span><br><span class="line">        effact: &apos;easeOut&apos;,</span><br><span class="line">        content: &apos;&lt;%- theme.mymotto.content %&gt;&apos;</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;% &#125; else &#123;%&gt;</span><br><span class="line">   get_hitokoto();</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/* 粘贴提示 */</span><br><span class="line">G($(&apos;.post-content&apos;), location.href, &apos;&lt;%- config.author %&gt;&apos;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/* 控制台 */</span><br><span class="line">if (window.console &amp;&amp; window.console.log) &#123;</span><br><span class="line">    setTimeout(function () &#123;</span><br><span class="line">        console.log(&apos;\n %c 一个坏掉的番茄 %c  © Simon Ma  http://tomotoes.com \n\n&apos;, &apos;color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;&apos;, &apos;color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;&apos;);</span><br><span class="line">    &#125;, 0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>原文出处<a href="https://github.com/Tomotoes/hexo-theme-tomotoes/wiki/%E9%85%8D%E7%BD%AE#%E5%BA%A7%E5%8F%B3%E9%93%AD" target="_blank" rel="noopener">hexo-theme-tomotoes 文档</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-12-06T06:41:50.535Z" itemprop="dateUpdated">2017-12-06 14:41:50</time>
+</span>
+
+
+        
+        原文链接：<a href="/2017/12/06/Hexo配置篇（2）（举例，持续更新）/" target="_blank" rel="external">http://yoursite.com/2017/12/06/Hexo配置篇（2）（举例，持续更新）/</a>
+        
+    </div>
+    <footer>
+        <div onclick="location.href='http://yoursite.com'">
+            <img src="/img/avatar.jpg" alt="周琪">
+            <a>周琪</a>
+        </div>
+    </footer>
+</blockquote>
+
+        
+    <div class="page-reward">
+        <nav class="myreward">
+            <a id="rewardBtn" href="javascript:;"><span>打&nbsp;赏</span><span>装成好像很多人打赏的样子</span></a>
+        </nav>
+    </div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/12/06/Hexo配置篇（2）（举例，持续更新）/&title=《Hexo配置篇（2）（举例，持续更新）》 — Hexo&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/12/06/Hexo配置篇（2）（举例，持续更新）/&title=《Hexo配置篇（2）（举例，持续更新）》 — Hexo&source=A blog from Hexo" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/12/06/Hexo配置篇（2）（举例，持续更新）/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Hexo配置篇（2）（举例，持续更新）》 — Hexo&url=http://yoursite.com/2017/12/06/Hexo配置篇（2）（举例，持续更新）/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/12/06/Hexo配置篇（2）（举例，持续更新）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/12/06/Hexo初入坑心得（1）/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：Hexo初入坑心得（1）">下一篇：Hexo初入坑心得（1）</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+    
+
+    
+
+    
+
+
+</article>
+
+</div>
+
+        <footer class="footer">
+    <div class="footer-content">
+        <span class="power">
+            <i class="icon icon-lg icon-copyright"></i>
+            2017
+            <i class="icon icon-lg icon-heart"></i>
+            <a href="http://yoursite.com">tomotoes.com</a>
+            <br/>
+            Power by
+            <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>&nbsp;·&nbsp;
+            Theme
+            <a href="https://github.com/tomotoes/hexo-theme-tomotoes/" target="_blank" rel="external nofollow">tomotoes</a>
+        </span>
+    
+        <br/>
+
+        <span id="RunTime" style="color:#a7a7a2;"></span>
+        <br/>
+        
+        <span>
+            
+	<i class="icon icon-lg icon-user">
+<span id="busuanzi_container_site_uv" style='display:none'>
+       访问用户：<span id="busuanzi_value_site_uv"></span>
+    </span>人</i>
+    ·
+    <i class="icon icon-lg icon-eye">
+    <span id="busuanzi_container_site_pv" style='display:none'>
+      访问次数：<span id="busuanzi_value_site_pv"></span>
+    </span>次
+    </i>
+
+
+        </span>
+        <br/>
+        
+        <span class="license">This blog is licensed under a <a rel="license" rel="external nofollow" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+    </div>      
+</footer>
+    </main>
+    
+        
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        <span>感谢您的鼓励支持！</span>
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" data-img="/img/dog.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechatPay">&nbsp;&nbsp;微信&nbsp;&nbsp;</span>
+                <span class="reward-toggle-item alipayPay">支付宝</span>
+            </div>
+        </label>
+        
+        <i class="icon icon-caret-up"></i>
+    </div>
+</div>
+
+
+    
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/12/06/Hexo配置篇（2）（举例，持续更新）/&title=《Hexo配置篇（2）（举例，持续更新）》 — Hexo&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/12/06/Hexo配置篇（2）（举例，持续更新）/&title=《Hexo配置篇（2）（举例，持续更新）》 — Hexo&source=A blog from Hexo" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/12/06/Hexo配置篇（2）（举例，持续更新）/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Hexo配置篇（2）（举例，持续更新）》 — Hexo&url=http://yoursite.com/2017/12/06/Hexo配置篇（2）（举例，持续更新）/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/12/06/Hexo配置篇（2）（举例，持续更新）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p class="wechatshare">扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqUlEQVR42u3awWojQQwE0Pz/T2dhT4HFuErqnnjhzckYZ9xPhmml1F9f8fX99/r5+uf15PtfNy48PDy80dJfXcmt//38q/dffTIH52vGw8PDu81LNoPNRvLqPskn83Lj4eHhfRqv/coZMrk/Hh4e3v/CO7sZ5Mv9iH0PDw8PbxRG7JvsJNRo44ljWQseHh5ezDsVLjz5+vp8Dw8PD280VZ8NxoaNbxxAFCvEw8PDu8DLm9182zgVRsxKMOzl8fDw8Ea5Qftvf/5XeUGT94fNNx4eHt5RXj7cmo2sZkdUk+IWvxseHh7eUV7bwrZfXAQH8Rgs34Tw8PDwzvLywwGzkX9SoJZRlBgPDw/vAq8NI5ImOylEW6xNYIGHh4d3g9cGo3l40W4b+/DiTYyLh4eHd5SXbwynWuTN0AsPDw/vd3n1MKkcj+Wk/aGrIqvGw8PDu8CbPYjb+PXUSoowFw8PD2/BS9riJJhot4T8npsQBA8PD+8GL2+UN1FCEte2ocOmBHh4eHgb3qkHehuq7o8jRFEFHh4e3oO8zcO93WzyLaotPR4eHt4zvKLjjlvbWTnycr98jYeHh/cgLw9tZ+C2fO22gYeHh/cML2le23j3TVjQLreNg/Hw8PAu8NpIYjaIWj3c97EvHh4e3gVeGwS0A6pN+LspGR4eHt49XhtA7BeUH7TKD2a9/Hnw8PDwLvPyB/3sWMCmcLN2HA8PD+8s77u8knIkke4+aIjKhIeHh3eBt48nksFYOyRrj1gdSGLw8PDwSl6+GbSL2B8dmEXJeHh4eM/w8kD2xtis3TbyouDh4eF9Pi9/9Lfbz/AOeHh4eL/Ky8PWWaOcfHs+YMPDw8O7zZsNvfJ2OW+jZ8OtNy01Hh4e3lFe+69+svTZopNP5vfEw8PDu8D7A2RPDQFqfMpXAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <!-- waves按钮特效 -->
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<!-- 主题配置脚本 -->
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+</script>
+
+<!-- jquery -->
+<script src="/js/jquery.min.js?v=2.0"></script>
+
+<!-- 搜索 -->
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item waves-block waves-effect" onclick="location.href='{path}'">
+    <div class="title ellipsis" title="{title}">{title}</div>
+</li>
+</template>
+
+
+<!-- main博客脚本 -->
+<script src="/js/main.min.js?v=2.0" ></script>
+
+<!-- 动画&配置 -->
+<script src="/js/script.min.js?v=2.0" ></script>
+
+<!-- 脚本管理 -->
+<script>
+/* 关于页面 布局优化 */
+if(location.href.indexOf("about")!==-1&&window.innerWidth<1200){
+	/*移动设备 内容会出现内边距*/
+	document.querySelector(".post-content").classList.add("about");
+}
+
+if(window.innerWidth > 800){
+	/* 3D标题 */
+	$(".content-header").on("mousemove", threedee);
+
+	/* 底部追随鼠标 */
+	$(".footer").hover(2);
+
+	/* gotop键的涟漪 */
+	$("#gotop").hover(1);
+
+	/* 赞赏的粒子雨 */
+	$("#reward").hover(3);
+
+	/* 微信公众号的底部渲染 */
+	$("#wechat").hover(4);
+
+    /* 标题跳动 */
+    $(".archivestitle").bumpyText();
+
+	/* 图片点击放大 */
+	const postimg = jQuery(".post-content img:not(.github-emoji)");
+	postimg.on("click",function(){
+
+		mask.classList.add("in");
+		main.classList.add("Mask");
+		menu.classList.add("Mask");
+		var myimg = this.cloneNode(true);
+		myimg.classList.add("imgShow");
+
+		setTimeout(function(){
+			jQuery(myimg).animate({
+				opacity:"1"
+			},1000);
+		},0);
+
+		document.body.appendChild(myimg);
+
+		myimg.onclick=function(){
+			document.body.removeChild(myimg);
+			mask.classList.remove("in");
+			main.classList.remove("Mask");
+			menu.classList.remove("Mask");
+		};
+
+	});
+
+}
+
+/* 名字跳动 */
+$("#name").bumpyText();
+
+
+/* 网站运行时间 */
+setInterval(function () {
+	setTime("2017/12/5");
+}, 1000);
+
+/* 文章块的淡出 */
+postshow();
+
+/* 座右铭 */
+
+    elasticText({
+        id: "mymotto",
+        duration: 100,
+        effact: "easeOut",
+        content: ""
+    });
+
+
+
+/* 粘贴提示 */
+G($(".post-content"), location.href, "周琪");
+
+
+/* 控制台 */
+if (window.console && window.console.log) {
+	setTimeout(function () {
+		console.log("\n %c 一个坏掉的番茄 %c  © Simon Ma  http://tomotoes.com \n\n", "color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;");
+	}, 0);
+}
+
+</script>
+
+
+
+
+<!-- 公式渲染 -->
+
+
+
+<!-- 不蒜子 -->
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+</body>
+</html>
